@@ -1,38 +1,782 @@
-.App {
-  text-align: center;
+.invite {
+  min-width: 320px;
+  max-width: 430px;
+  margin: 0 auto;
+  background: var(--cream);
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.invite__section {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+
+.invite__script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.invite__sans {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-stretch: 125%;
+  font-variation-settings: "wdth" 125;
+  letter-spacing: 0.04em;
+}
+
+/* Hero */
+.hero {
+  background: var(--cream);
+  padding: 0 0 20px;
+}
+
+.hero__envelope {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  line-height: 0;
+}
+
+.hero__envelope-img {
+  display: block;
+  width: 127.25%;
+  max-width: none;
+  height: auto;
+  margin: 0 0 -9.23% -13.41%;
+  pointer-events: none;
+}
+
+.hero__card-text {
+  position: absolute;
+  left: 50%;
+  top: 57%;
+  transform: translate(-50%, -50%);
+  width: 72%;
+  margin: 0;
+  color: var(--maroon);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.41px;
+  line-height: 10.3px;
+  white-space: pre-line;
+}
+
+.hero__names {
+  position: relative;
+  z-index: 1;
+  margin: 28px 16px 0;
+  color: var(--burgundy);
+  font-family: "Good Vibes Pro", var(--font-script);
+  font-size: 20.07px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 31px;
+  text-align: center;
+}
+
+.hero__amp {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--olive-text);
+}
+
+/* Story */
+.story {
+  background: var(--olive);
+  padding: 18px 0 12px;
+  gap: 10px;
+}
+
+.story__lead {
+  margin: 0;
+  max-width: 200px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.35;
+}
+
+.story__lead-date {
+  color: var(--olive-text);
+  font-weight: 500;
+}
+
+.story__lead-yes {
+  display: block;
+  color: #fff;
+  font-family: var(--font-script);
+  font-size: 28px;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.story__photo {
+  width: 258px;
+  max-width: 86%;
+  height: auto;
+  object-fit: contain;
+}
+
+.story__invite {
+  margin: 4px 0 0;
+  max-width: 138px;
+  color: var(--olive-text);
+  font-size: 9.12px;
+  font-weight: 500;
+  letter-spacing: 0.73px;
+  line-height: normal;
+}
+
+.story__cluster {
+  width: 260px;
+  max-width: 88%;
+  height: auto;
+  margin-top: -4px;
+  object-fit: contain;
+}
+
+/* Date */
+.date {
+  background: var(--cream);
+  padding: 10px 0 28px;
+  overflow: hidden;
+}
+
+.date__kicker,
+.date__note {
+  margin: 0;
+  color: var(--olive-text);
+}
+
+.date__kicker {
+  font-size: 9.12px;
+  font-weight: 500;
+  letter-spacing: 0.73px;
+  line-height: 18.25px;
+  white-space: nowrap;
+}
+
+.date__month {
+  margin: 13px 0;
+  color: var(--burgundy);
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.date__week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 161px;
+  margin-bottom: 13px;
+  color: var(--burgundy);
+  font-size: 7.3px;
+  font-weight: 300;
+  letter-spacing: 1.22px;
+  line-height: normal;
+}
+
+.date__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 161px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.date__cell {
+  position: relative;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 22px;
+  color: var(--burgundy);
+  font-size: 10.95px;
+  font-weight: 300;
+  letter-spacing: 1.22px;
+  line-height: normal;
 }
 
-.App-link {
-  color: #61dafb;
+.date__cell--muted {
+  opacity: 0.31;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.date__cell--wedding {
+  font-size: 18.25px;
+  font-weight: 500;
+  letter-spacing: 1.22px;
+  line-height: normal;
+}
+
+.date__heart {
+  position: absolute;
+  z-index: 0;
+  top: -2px;
+  right: 1px;
+  width: 26px;
+  height: 26px;
+  pointer-events: none;
+  transform: rotate(15deg);
+}
+
+.date__num {
+  position: relative;
+  z-index: 1;
+}
+
+.date__note {
+  max-width: 160px;
+  font-size: 7.3px;
+  font-weight: 500;
+  letter-spacing: 0.73px;
+  line-height: normal;
+  text-align: center;
+}
+
+.date > :not(.date__lace) {
+  position: relative;
+  z-index: 1;
+}
+
+.date__lace {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  /* filter: invert(1) sepia(0.55) saturate(0.28) brightness(1.42); */
+  /* mix-blend-mode: multiply;
+  opacity: 0.36; */
+}
+
+/* Venue */
+.venue {
+  padding: 28px 32px 32px;
+  gap: 3px;
+}
+
+.venue__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.venue__veil {
+  position: absolute;
+  inset: 0;
+  background: rgba(196, 196, 160, 0.92);
+  pointer-events: none;
+}
+
+.venue__title {
+  position: relative;
+  margin: 0;
+  color: var(--olive-text);
+  font-family: "Good Vibes Pro", var(--font-script);
+  font-size: 23.72px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 31px;
+}
+
+.venue__place {
+  position: relative;
+  margin: 4px 0 0;
+  color: var(--cream);
+  font-size: 9.12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 5.8px;
+  text-align: center;
+}
+
+.venue__city,
+.venue__addr {
+  position: relative;
+  margin: 4px 0 0;
+  color: var(--cream);
+  font-size: 7.3px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 7.3px;
+  text-align: center;
+}
+
+.venue__map {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 133.24px;
+  height: 13.84px;
+  margin-top: 10px;
+  padding: 0;
+  border: 0.36px solid var(--olive-text);
+  border-radius: 2.55px;
+  color: var(--olive-text);
+  font-size: 5.11px;
+  font-weight: 500;
+  letter-spacing: 0.36px;
+  line-height: 7.9px;
+  text-align: center;
+  text-decoration: none;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* Timeline */
+.timeline {
+  background: var(--burgundy);
+  padding: 28px 24px 36px;
+  gap: 22px;
+}
+
+.timeline__title {
+  margin: 0;
+  color: var(--olive);
+  font-size: 9.12px;
+  font-weight: 500;
+  letter-spacing: 0.73px;
+  line-height: normal;
+  text-align: center;
+  white-space: pre-line;
+}
+
+.timeline__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 12px;
+  row-gap: 18px;
+  width: min(280px, 100%);
+}
+
+.timeline__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeline__item--cake {
+  grid-column: 1 / -1;
+}
+
+.timeline__icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.timeline__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  color: var(--cream);
+}
+
+.timeline__name {
+  font-size: 5.05px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 5.8px;
+  text-align: center;
+}
+
+.timeline__time {
+  font-size: 5.05px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 5.8px;
+  text-align: center;
+}
+
+/* Dress code */
+.dress {
+  background: var(--cream);
+  padding: 44px 32px 40px;
+  gap: 28px;
+  overflow: hidden;
+}
+
+.dress__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 210%;
+  height: 210%;
+  transform: translate(-50%, -48%);
+  object-fit: cover;
+  filter: brightness(1.18);
+  pointer-events: none;
+}
+
+.dress__veil {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 252, 244, 0.34);
+  pointer-events: none;
+}
+
+.dress__title {
+  position: relative;
+  margin: 0 0 14px;
+  color: var(--burgundy);
+  font-family: "Good Vibes Pro", var(--font-script);
+  font-size: 20.07px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 31px;
+  text-align: center;
+}
+
+.dress__text {
+  position: relative;
+  margin: 0;
+  max-width: 174px;
+  color: var(--olive-text);
+  font-size: 6.57px;
+  font-weight: 500;
+  letter-spacing: 0.73px;
+  line-height: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.dress__swatches {
+  position: relative;
+  display: flex;
+  gap: 5px;
+}
+
+.dress__swatch {
+  width: 26px;
+  height: 38px;
+  border-radius: 13px 13px 2px 2px;
+}
+
+/* Details */
+.details {
+  background: var(--olive);
+  padding: 28px 28px 32px;
+  gap: 18px;
+  overflow: hidden;
+}
+
+.details__swans {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  /* height: 64%; */
+  /* overflow: hidden; */
+  pointer-events: none;
+}
+
+.details__swan {
+  position: absolute;
+  top: 0;
+  /* width: 82%; */
+  height: 100%;
+  object-fit: contain;
+}
+
+.details__swan--left {
+  left: -21%;
+  height: 282px;
+  width: 282px;
+}
+
+.details__swan--right {
+  right: -21%;
+  height: 282px;
+  width: 282px;
+  transform: scaleX(-1);
+}
+
+.details > :not(.details__swans) {
+  position: relative;
+  z-index: 1;
+}
+
+.details__title {
+  position: relative;
+  margin: 0 0 4px;
+  color: var(--cream);
+  font-family: "Good Vibes Pro", var(--font-script);
+  font-size: 20.07px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 31px;
+  text-align: center;
+}
+
+.details__block {
+  position: relative;
+  max-width: 260px;
+}
+
+.details__h {
+  margin: 0 0 8px;
+  color: var(--cream);
+  font-size: 7.3px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 5.8px;
+  text-align: center;
+}
+
+.details__p {
+  margin: 0;
+  color: var(--olive-text);
+  font-size: 5.47px;
+  font-weight: 500;
+  letter-spacing: 0.67px;
+  line-height: normal;
+  text-align: center;
+  width: 162.02px;
+}
+
+/* RSVP */
+.rsvp {
+  background: var(--cream);
+  padding: 27px 40px 27px;
+  gap: 16px;
+}
+
+.rsvp__title {
+  margin: 0 0 10px;
+  color: var(--burgundy);
+  font-family: "Good Vibes Pro", var(--font-script);
+  font-size: 20.07px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 31px;
+  text-align: center;
+}
+
+.rsvp__lead {
+  margin: 0;
+  max-width: 160px;
+  color: var(--olive-text);
+  font-size: 5.84px;
+  font-weight: 500;
+  letter-spacing: 0.36px;
+  line-height: 9px;
+  text-align: center;
+}
+
+.rsvp fieldset {
+  min-inline-size: 0;
+  width: 100%;
+}
+
+.rsvp legend {
+  padding: 0;
+  width: 100%;
+}
+
+.rsvp__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 160px;
+}
+
+.rsvp__field {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+}
+
+.rsvp__label {
+  color: var(--burgundy);
+  font-size: 5.11px;
+  font-weight: 500;
+  letter-spacing: 0.18px;
+  line-height: normal;
+  text-align: center;
+}
+
+.rsvp__input {
+  width: 100%;
+  border: none;
+  border-bottom: 0.36px solid var(--burgundy);
+  background: transparent;
+  color: var(--burgundy);
+  caret-color: var(--burgundy);
+  font-family: var(--font-sans);
+  font-stretch: 125%;
+  font-variation-settings: "wdth" 125;
+  font-size: 5.11px;
+  font-weight: 500;
+  letter-spacing: 0.18px;
+  line-height: normal;
+  text-align: center;
+  padding: 2px 0;
+  outline: none;
+}
+
+.rsvp__custom {
+  width: 100%;
+  border: none;
+  border-bottom: 0.36px solid var(--burgundy);
+  background: transparent;
+  color: var(--burgundy);
+  font-family: var(--font-sans);
+  font-stretch: 125%;
+  font-variation-settings: "wdth" 125;
+  font-size: 5.11px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 6.1px;
+  text-align: left;
+  padding: 2px 0;
+  outline: none;
+}
+
+.rsvp__custom::placeholder {
+  color: var(--burgundy);
+  opacity: 1;
+}
+
+.rsvp__options {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 4.33px;
+  width: 160px;
+  padding: 0.58px 0 0;
+  box-sizing: border-box;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.rsvp__choice {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 4.33px;
+  width: 160px;
+  min-height: 8.67px;
+  box-sizing: border-box;
+  color: var(--burgundy);
+  font-size: 5.11px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 6.1px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.rsvp__choice input {
+  accent-color: var(--burgundy);
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  flex: none;
+}
+
+.rsvp__submit {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  /* margin-top: 8px; */
+  width: 86.7px;
+  height: 17.34px;
+  padding: 0 5.42px;
+  border: 0.36px solid var(--olive-text);
+  border-radius: 3.28px;
+  background: transparent;
+  color: var(--olive-text);
+  font-family: var(--font-sans);
+  font-size: 5.11px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  cursor: pointer;
+}
+
+.rsvp__submit:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.rsvp__thanks {
+  margin: 0 auto;
+  max-width: 160px;
+  color: var(--olive-text);
+  font-size: 5.84px;
+  font-weight: 500;
+  letter-spacing: 0.36px;
+  line-height: 9px;
+  text-align: center;
+}
+
+.rsvp__error {
+  margin: 4px auto 0;
+  max-width: 160px;
+  color: var(--burgundy);
+  font-size: 5.11px;
+  font-weight: 500;
+  letter-spacing: 0.18px;
+  line-height: normal;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  background: var(--burgundy);
+  padding: 28px 32px 32px;
+  overflow: hidden;
+}
+
+.footer__lace {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  pointer-events: none;
+}
+
+.footer__text {
+  position: relative;
+  margin: 0;
+  color: var(--cream);
+  font-size: 7.3px;
+  font-weight: 500;
+  letter-spacing: 0.36px;
+  line-height: normal;
+  text-align: center;
+  width: 160px;
+}
+
+.footer__names {
+  position: relative;
+  margin: 16px 0 0;
+  color: var(--cream);
+  font-family: "Good Vibes Pro", var(--font-script);
+  font-size: 13.5px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  text-align: center;
 }
