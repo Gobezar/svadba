@@ -40,43 +40,42 @@
   overflow: hidden;
   margin: 0;
   line-height: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .hero__envelope-img {
   display: block;
-  width: 127.25%;
-  max-width: none;
-  height: auto;
-  margin: 0 0 -9.23% -13.41%;
   pointer-events: none;
+  height: 363px;
+  width: 363px;
 }
 
 .hero__card-text {
   position: absolute;
   left: 50%;
-  top: 57%;
+  top: 50%;
   transform: translate(-50%, -50%);
   width: 72%;
-  margin: 0;
   color: var(--maroon);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.41px;
-  line-height: 10.3px;
+  line-height: 10.28px;
   white-space: pre-line;
 }
 
 .hero__names {
   position: relative;
   z-index: 1;
-  margin: 28px 16px 0;
   color: var(--burgundy);
   font-family: "Good Vibes Pro", var(--font-script);
-  font-size: 20.07px;
+  font-size: 25px;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 31px;
+  line-height: 38.6px;
   text-align: center;
+  margin: 0;
 }
 
 .hero__amp {
@@ -89,37 +88,40 @@
 /* Story */
 .story {
   background: var(--olive);
-  padding: 18px 0 12px;
-  gap: 10px;
+  padding: 9px 0 12px;
 }
 
 .story__lead {
   margin: 0;
   max-width: 200px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.04em;
   line-height: 1.35;
 }
 
 .story__lead-date {
+  display: block;
   color: var(--olive-text);
+  font-size: 12px;
+  line-height: 19px;
+  letter-spacing: 0.73px;
   font-weight: 500;
 }
 
 .story__lead-yes {
   display: block;
   color: #fff;
-  font-family: var(--font-script);
-  font-size: 28px;
+  font-family: "Good Vibes Pro", var(--font-script);
+  font-size: 25px;
   letter-spacing: 0;
   font-weight: 400;
+  line-height: 38.6px;
 }
 
 .story__photo {
-  width: 258px;
-  max-width: 86%;
-  height: auto;
+  width: 261px;
+  height: 213px;
   object-fit: contain;
 }
 
@@ -127,7 +129,7 @@
   margin: 4px 0 0;
   max-width: 138px;
   color: var(--olive-text);
-  font-size: 9.12px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.73px;
   line-height: normal;
@@ -144,7 +146,7 @@
 /* Date */
 .date {
   background: var(--cream);
-  padding: 10px 0 28px;
+  padding: 10px 0 58px;
   overflow: hidden;
 }
 
@@ -155,7 +157,7 @@
 }
 
 .date__kicker {
-  font-size: 9.12px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.73px;
   line-height: 18.25px;
@@ -172,19 +174,19 @@
 .date__week {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  width: 161px;
-  margin-bottom: 13px;
+  width: 216px;
+  margin-bottom: 5px;
   color: var(--burgundy);
-  font-size: 7.3px;
+  font-size: 9.82px;
   font-weight: 300;
-  letter-spacing: 1.22px;
-  line-height: normal;
+  letter-spacing: 1.64px;
+  line-height: 100%;
 }
 
 .date__grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  width: 161px;
+  width: 216px;
   align-items: center;
   margin-bottom: 22px;
 }
@@ -216,8 +218,8 @@
 .date__heart {
   position: absolute;
   z-index: 0;
-  top: -2px;
-  right: 1px;
+  top: -1px;
+  right: 3px;
   width: 26px;
   height: 26px;
   pointer-events: none;
@@ -230,11 +232,11 @@
 }
 
 .date__note {
-  max-width: 160px;
-  font-size: 7.3px;
+  max-width: 249px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.73px;
-  line-height: normal;
+  line-height: 100%;
   text-align: center;
 }
 
@@ -282,20 +284,20 @@
   margin: 0;
   color: var(--olive-text);
   font-family: "Good Vibes Pro", var(--font-script);
-  font-size: 23.72px;
+  font-size: 25px;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 31px;
+  line-height: 38.6px;
 }
 
 .venue__place {
   position: relative;
   margin: 4px 0 0;
   color: var(--cream);
-  font-size: 9.12px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 5.8px;
+  line-height: normal;
   text-align: center;
 }
 
@@ -304,10 +306,10 @@
   position: relative;
   margin: 4px 0 0;
   color: var(--cream);
-  font-size: 7.3px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 7.3px;
+  line-height: normal;
   text-align: center;
 }
 
@@ -317,17 +319,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 133.24px;
-  height: 13.84px;
+  width: 163.98px;
+  height: 23.6px;
   margin-top: 10px;
-  padding: 0;
-  border: 0.36px solid var(--olive-text);
-  border-radius: 2.55px;
+  padding: 0 7.37px;
+  border: 0.5px solid var(--olive-text);
+  border-radius: 4.47px;
   color: var(--olive-text);
-  font-size: 5.11px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.36px;
-  line-height: 7.9px;
+  line-height: normal;
   text-align: center;
   text-decoration: none;
   background: transparent;
@@ -344,7 +346,7 @@
 .timeline__title {
   margin: 0;
   color: var(--olive);
-  font-size: 9.12px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.73px;
   line-height: normal;
@@ -386,25 +388,25 @@
 }
 
 .timeline__name {
-  font-size: 5.05px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 5.8px;
+  line-height: 15px;
   text-align: center;
 }
 
 .timeline__time {
-  font-size: 5.05px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 5.8px;
+  line-height: 15px;
   text-align: center;
 }
 
 /* Dress code */
 .dress {
   background: var(--cream);
-  padding: 44px 32px 40px;
+  padding: 44px 32px 0;
   gap: 28px;
   overflow: hidden;
 }
@@ -417,7 +419,7 @@
   height: 210%;
   transform: translate(-50%, -48%);
   object-fit: cover;
-  filter: brightness(1.18);
+  filter: brightness(1.2);
   pointer-events: none;
 }
 
@@ -433,19 +435,19 @@
   margin: 0 0 14px;
   color: var(--burgundy);
   font-family: "Good Vibes Pro", var(--font-script);
-  font-size: 20.07px;
+  font-size: 25px;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 31px;
+  line-height: 38.6px;
   text-align: center;
 }
 
 .dress__text {
   position: relative;
   margin: 0;
-  max-width: 174px;
+  max-width: 253px;
   color: var(--olive-text);
-  font-size: 6.57px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.73px;
   line-height: normal;
@@ -457,12 +459,13 @@
   position: relative;
   display: flex;
   gap: 5px;
+  margin: 0;
 }
 
 .dress__swatch {
-  width: 26px;
-  height: 38px;
-  border-radius: 13px 13px 2px 2px;
+  width: 30px;
+  height: 48px;
+  border-radius: 10.58px 10.58px 0 0;
 }
 
 /* Details */
@@ -478,7 +481,7 @@
   z-index: 0;
   left: 0;
   right: 0;
-  top: 0;
+  top: 10%;
   /* height: 64%; */
   /* overflow: hidden; */
   pointer-events: none;
@@ -494,14 +497,14 @@
 
 .details__swan--left {
   left: -21%;
-  height: 282px;
-  width: 282px;
+  height: 300px;
+  width: 300px;
 }
 
 .details__swan--right {
   right: -21%;
-  height: 282px;
-  width: 282px;
+  height: 300px;
+  width: 300px;
   transform: scaleX(-1);
 }
 
@@ -515,10 +518,10 @@
   margin: 0 0 4px;
   color: var(--cream);
   font-family: "Good Vibes Pro", var(--font-script);
-  font-size: 20.07px;
+  font-size: 25px;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 31px;
+  line-height: 38.6px;
   text-align: center;
 }
 
@@ -530,22 +533,22 @@
 .details__h {
   margin: 0 0 8px;
   color: var(--cream);
-  font-size: 7.3px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 5.8px;
+  line-height: normal;
   text-align: center;
 }
 
 .details__p {
   margin: 0;
   color: var(--olive-text);
-  font-size: 5.47px;
+  font-size: 8px;
   font-weight: 500;
   letter-spacing: 0.67px;
   line-height: normal;
   text-align: center;
-  width: 162.02px;
+  width: 218px;
 }
 
 /* RSVP */
@@ -559,21 +562,21 @@
   margin: 0 0 10px;
   color: var(--burgundy);
   font-family: "Good Vibes Pro", var(--font-script);
-  font-size: 20.07px;
+  font-size: 25px;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 31px;
+  line-height: 42px;
   text-align: center;
 }
 
 .rsvp__lead {
   margin: 0;
-  max-width: 160px;
+  max-width: 218px;
   color: var(--olive-text);
-  font-size: 5.84px;
+  font-size: 9px;
   font-weight: 500;
   letter-spacing: 0.36px;
-  line-height: 9px;
+  line-height: normal;
   text-align: center;
 }
 
@@ -592,7 +595,7 @@
   flex-direction: column;
   gap: 12px;
   width: 100%;
-  max-width: 160px;
+  max-width: 218px;
 }
 
 .rsvp__field {
@@ -606,7 +609,7 @@
 
 .rsvp__label {
   color: var(--burgundy);
-  font-size: 5.11px;
+  font-size: 9px;
   font-weight: 500;
   letter-spacing: 0.18px;
   line-height: normal;
@@ -623,7 +626,7 @@
   font-family: var(--font-sans);
   font-stretch: 125%;
   font-variation-settings: "wdth" 125;
-  font-size: 5.11px;
+  font-size: 8px;
   font-weight: 500;
   letter-spacing: 0.18px;
   line-height: normal;
@@ -641,10 +644,10 @@
   font-family: var(--font-sans);
   font-stretch: 125%;
   font-variation-settings: "wdth" 125;
-  font-size: 5.11px;
+  font-size: 8px;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 6.1px;
+  line-height: normal;
   text-align: left;
   padding: 2px 0;
   outline: none;
@@ -673,13 +676,13 @@
   align-items: flex-start;
   gap: 4.33px;
   width: 160px;
-  min-height: 8.67px;
+  min-height: 8px;
   box-sizing: border-box;
   color: var(--burgundy);
-  font-size: 5.11px;
+  font-size: 8px;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 6.1px;
+  line-height: normal;
   text-align: left;
   cursor: pointer;
 }
@@ -707,7 +710,7 @@
   background: transparent;
   color: var(--olive-text);
   font-family: var(--font-sans);
-  font-size: 5.11px;
+  font-size: 8px;
   font-weight: 500;
   letter-spacing: 0;
   line-height: normal;
@@ -724,7 +727,7 @@
   margin: 0 auto;
   max-width: 160px;
   color: var(--olive-text);
-  font-size: 5.84px;
+  font-size: 8px;
   font-weight: 500;
   letter-spacing: 0.36px;
   line-height: 9px;
@@ -735,7 +738,7 @@
   margin: 4px auto 0;
   max-width: 160px;
   color: var(--burgundy);
-  font-size: 5.11px;
+  font-size: 8px;
   font-weight: 500;
   letter-spacing: 0.18px;
   line-height: normal;
@@ -761,22 +764,22 @@
   position: relative;
   margin: 0;
   color: var(--cream);
-  font-size: 7.3px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.36px;
   line-height: normal;
   text-align: center;
-  width: 160px;
+  width: 230px;
 }
 
 .footer__names {
   position: relative;
-  margin: 16px 0 0;
+  margin: 25px 0 0;
   color: var(--cream);
   font-family: "Good Vibes Pro", var(--font-script);
-  font-size: 13.5px;
+  font-size: 25px;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 20.8px;
+  line-height: 21px;
   text-align: center;
 }

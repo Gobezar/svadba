@@ -12,7 +12,9 @@ export default function Story() {
       <p className="invite__sans story__invite">
         и вот мы уже готовы позвать
         <br />
-        Вас отмечать с нами праздник
+        Вас отмечать
+        <br />
+        с нами праздник
         <br />
         нашей любви!
       </p>
